@@ -56,15 +56,14 @@ class BukuController extends Controller
     $data = [
         'judul' => $request->judul,
         'penulis' => $request->penulis,
-        'penerbir' => $request->penerbit,
+        'penerbit' => $request->penerbit,
         'tahun_terbit' => $request->tahun_terbit,
     ];
 
     Buku::create($data);
     return redirect()->route('buku.index')->with('success', 'Data Berhasil di simpan');
 
-
-}
+    }
 
 
     /**
@@ -86,7 +85,8 @@ class BukuController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dt = Buku::find($id);
+        return view('data_buku.form_edit', compact('dt'));
     }
 
     /**
@@ -98,7 +98,31 @@ class BukuController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate(
+            [
+                'judul' => 'required',
+                'penulis' => 'required',
+                'penerbit' => 'required',
+                'tahun_terbit' => 'required|max:4',
+            ], 
+            [
+                'judul.required' => 'judul wajib diisi',
+                'penulis.required' => 'penulis wajib diisi',
+                'penerbit.required' => 'penerbit wajib diisi',
+                'tahun_terbit.required' => 'tahun terbit wajib diisi',
+            ]
+        );
+    
+        $data = [
+            'judul' => $request->judul,
+            'penulis' => $request->penulis,
+            'penerbit' => $request->penerbit,
+            'tahun_terbit' => $request->tahun_terbit,
+        ];
+    
+        Buku::where('id', $id)->update($data);
+        return redirect()->route('buku.index')->with('success', 'Data Berhasil di edit');
+    
     }
 
     /**
