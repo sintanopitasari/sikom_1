@@ -48,10 +48,10 @@
 												<td>{{ $dt->tahun_terbit}}</td>
 												<td>
 													<a href="{{ route('buku.edit' ,$dt->id) }}" class="btn btn-sm btn-warning">Edit</a>
-													<from onsubmit="return confirm('Apakah anda yakin ingin hapus data ini?')"  action="{{ route('buku.destroy' ,$dt->id) }}" method="post"d-inline">
+													<form onsubmit="return confirm('Apakah anda yakin ingin hapus data ini?')"  action="{{ route('buku.destroy',$dt->id) }}" method="post" class="d-inline">
 														@csrf @method('DELETE')
 														<button type="submit" class="btn btn-sm btn-danger">DELETE</button>
-													</from>
+													</form>
 												</td>
 											</tr>
                                             @endforeach

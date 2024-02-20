@@ -134,6 +134,6 @@ class BukuController extends Controller
     public function destroy($id)
     {
         Buku::find($id)->delete();
-        return back()->with('succes', 'Data Berhasil di hapus');
+        return back()->with('success', 'Data Berhasil di hapus');
     }
 }
