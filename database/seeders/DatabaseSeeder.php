@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'username'=> 'admin1',
-            'email'=> 'sintanopitsari2gmail.com',
+            'email'=> 'sintanopitsari2@gmail.com',
             'password'=> Hash::make ('08112005'),
             'nama_lengkap'=>'admin_satu',
             'role'=>'administrator',

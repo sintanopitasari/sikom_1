@@ -58,18 +58,14 @@
 
 									</div>
 									<div class="dropdown main-profile-menu nav nav-item nav-link">
-										<a class="profile-user d-flex" href=""><img src="{{ asset ('assets')}}/img/faces/sinta.jpg" alt="user-img" class="rounded-circle mCS_img_loaded"><span></span></a>
+										<a class="profile-user d-flex" href=""><img src="{{ asset ('assets') }}/img/faces/sinta.jpg" alt="user-img" class="rounded-circle mCS_img_loaded"><span></span></a>
 
 										<div class="dropdown-menu">
 											<div class="main-header-profile header-img">
-												<div class="main-img-user"><img alt="" src="{{ asset ('assets')}}/img/faces/sinta.jpg"></div>
+												<div class="main-img-user"><img alt="" src="{{ asset ('assets') }}/img/faces/sinta.jpg"></div>
 												<h6>Sinta Nptsrr</h6><span> Administrator</span>
 											</div>
-											<a class="dropdown-item" href="profile.html"><i class="far fa-user"></i> My Profile</a>
-											<a class="dropdown-item" href="profile.html"><i class="far fa-edit"></i> Edit Profile</a>
-											<a class="dropdown-item" href="profile.html"><i class="far fa-clock"></i> Activity Logs</a>
-											<a class="dropdown-item" href="profile.html"><i class="fas fa-sliders-h"></i> Account Settings</a>
-											<a class="dropdown-item" href="signup.html"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+											<a class="dropdown-item" href="{{ route('logout') }}"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
 										</div>
 									</div>
 									<div class="dropdown main-header-message right-toggle">
