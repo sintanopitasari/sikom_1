@@ -63,7 +63,7 @@
 										<div class="dropdown-menu">
 											<div class="main-header-profile header-img">
 												<div class="main-img-user"><img alt="" src="{{ asset ('assets') }}/img/faces/sinta.jpg"></div>
-												<h6>Sinta Nptsrr</h6><span> Administrator</span>
+												<h6>Sinta Nopitasari</h6><span> Administrator</span>
 											</div>
 											<a class="dropdown-item" href="{{ route('logout') }}"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
 										</div>

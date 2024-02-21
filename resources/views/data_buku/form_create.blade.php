@@ -26,14 +26,14 @@
 								<p class="mg-b-20">Harap untuk mengisi semua input</p>
 								@include('_component.pesan')
 								<div class="pd-30 pd-sm-40 bg-gray-100">
-                                <form action="{{ route('buku.store')}}" method="post">
+                                <form action="{{ route('buku.store') }}" method="post">
                                     @csrf
 									<div class="row row-xs align-items-center mg-b-20">
 										<div class="col-md-4">
 											<label class="form-label mg-b-0">Judul Buku</label>
 										</div>
 										<div class="col-md-8 mg-t-5 mg-md-t-0">
-											<input class="form-control" placeholder="Enter your Judul Buku" name="judul" type="text">
+											<input class="form-control" placeholder="Enter Your Judul Buku" name="judul" type="text">
 										</div>
 									</div>
 									<div class="row row-xs align-items-center mg-b-20">
@@ -41,7 +41,7 @@
 											<label class="form-label mg-b-0">Penulis</label>
 										</div>
 										<div class="col-md-8 mg-t-5 mg-md-t-0">
-											<input class="form-control" placeholder="Enter your Penulis" name="penulis" type="text">
+											<input class="form-control" placeholder="Enter Your Penulis" name="penulis" type="text">
 										</div>
 									</div>
 									<div class="row row-xs align-items-center mg-b-20">
@@ -49,7 +49,7 @@
 											<label class="form-label mg-b-0">Penerbit</label>
 										</div>
 										<div class="col-md-8 mg-t-5 mg-md-t-0">
-											<input class="form-control" placeholder="Enter your Penerbit" name="penerbit" type="text">
+											<input class="form-control" placeholder="Enter Your Penerbit" name="penerbit" type="text">
 										</div>
 									</div>
 									<div class="row row-xs align-items-center mg-b-20">
@@ -57,11 +57,11 @@
 											<label class="form-label mg-b-0">Tahun Terbit</label>
 										</div>
 										<div class="col-md-8 mg-t-5 mg-md-t-0">
-											<input class="form-control" placeholder="Enter your Tahun Terbit" name="tahun_terbit" type="number">
+											<input class="form-control" placeholder="Enter Your Tahun Terbit" name="tahun_terbit" type="number">
 										</div>
 									</div>
 									<button class="btn btn-primary pd-x-30 mg-e-5 mg-t-5" type="submit">SIMPAN</button>
-									<a href="{{ route('buku.index') }}" class="btn btn-dark pd-x-30 mg-t-5"> << BACK </a>
+									<a href="{{ route('buku.index') }}" class="btn btn-dark pd-x-30 mg-t-5"> <<< BACK </a>
                                 </form>
 								</div>
 							</div>
